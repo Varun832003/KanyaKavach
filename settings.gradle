@@ -10,7 +10,12 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        jcenter()
+        repositories {
+            maven { url 'https://jitpack.io' }
+        }
     }
 }
+
 rootProject.name = "Kanya Kavach"
 include ':app'

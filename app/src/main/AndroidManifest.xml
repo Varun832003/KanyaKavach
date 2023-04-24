@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
-
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.kanyakavach">
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,10 +14,11 @@
         android:theme="@style/Theme.KanyaKavach"
         tools:targetApi="31">
         <activity
-            android:name=".activities.IntroActivity"
-            android:exported="false" />
-        <activity
             android:name=".activities.MainActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.contacts"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
